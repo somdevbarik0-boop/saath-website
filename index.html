@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#160d24">
+<title>Saath — Companionship Booking</title>
+<meta name="description" content="Discover adult companionship profiles and request a respectful, platonic booking in supported Indian cities.">
+<style>
+:root{--bg:#100a19;--panel:#1b1227;--panel2:#241831;--text:#fff8ff;--muted:#c8b9d1;--pink:#ff6fae;--violet:#b69aff;--line:#3a2949;--good:#8fe0bd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#39204a 0,transparent 34%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}a{color:inherit}button,input,select,textarea{font:inherit}button,a.btn{cursor:pointer}.wrap{width:min(1160px,92%);margin:auto}.topbar{position:sticky;top:0;z-index:10;background:#100a19eF;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{display:flex;gap:10px;align-items:center;text-decoration:none;font-weight:900;font-size:1.25rem;letter-spacing:.3px}.logo{display:grid;place-items:center;width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,var(--pink),var(--violet));color:#23132d;font-size:1.35rem}.navlinks{display:flex;gap:20px;align-items:center}.navlinks a{text-decoration:none;color:var(--muted);font-size:.94rem}.navlinks a:hover{color:white}.btn{border:0;border-radius:13px;padding:12px 18px;background:linear-gradient(110deg,var(--pink),var(--violet));color:#210f2c;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .2s,filter .2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}.btn.secondary{background:transparent;border:1px solid #785b8e;color:var(--text)}.btn.small{padding:9px 12px;font-size:.9rem}.hero{padding:72px 0 50px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:38px}.eyebrow{display:inline-flex;padding:7px 12px;border:1px solid #6b4b7c;border-radius:999px;color:#f7cde2;background:#29172f;font-size:.84rem;font-weight:700}.hero h1{font-size:clamp(2.45rem,5vw,4.7rem);line-height:1.04;letter-spacing:-2px;margin:20px 0}.gradient{background:linear-gradient(90deg,#ff8fbd,#c2a6ff);background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:610px;font-size:1.08rem}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}.trust{display:flex;gap:16px;flex-wrap:wrap;color:#d7c8df;font-size:.9rem}.hero-art{min-height:390px;border:1px solid #60456f;border-radius:28px;padding:18px;background:linear-gradient(145deg,#2d1b3b,#170e22);position:relative;overflow:hidden}.hero-art:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:#ff6fae24;right:-50px;top:-45px}.hero-art img{width:100%;height:350px;object-fit:cover;border-radius:20px;filter:saturate(.8)}.float-card{position:absolute;left:32px;bottom:32px;background:#160d24ee;border:1px solid #694c7c;border-radius:16px;padding:13px 16px;box-shadow:0 12px 40px #0005}.float-card b{display:block}.float-card span{font-size:.85rem;color:var(--muted)}section{padding:55px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}.section-head h2{font-size:clamp(1.8rem,3vw,2.65rem);margin:0}.section-head p{color:var(--muted);margin:7px 0 0}.filters{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;margin:24px 0}.field{display:flex;flex-direction:column;gap:7px}.field label{font-weight:700;font-size:.9rem;color:#eadcf0}.field input,.field select,.field textarea{width:100%;background:#160e20;border:1px solid #493455;color:var(--text);border-radius:12px;padding:12px 13px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--pink);box-shadow:0 0 0 3px #ff6fae20}.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.profile{background:linear-gradient(160deg,#241730,#191020);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .2s,border-color .2s}.profile:hover{transform:translateY(-4px);border-color:#8b659f}.profile img{width:100%;height:260px;object-fit:cover;display:block;background:#34243d}.profile-body{padding:17px}.profile-top{display:flex;justify-content:space-between;gap:10px;align-items:start}.profile h3{margin:0;font-size:1.15rem}.tag{font-size:.78rem;border-radius:999px;padding:5px 9px;background:#34213e;color:#f6c6e0;white-space:nowrap}.profile p{color:var(--muted);margin:9px 0 13px;font-size:.93rem}.profile-meta{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:14px;font-size:.88rem;color:#e5d5ec}.price{font-weight:900;color:#fff}.profile-actions{display:flex;gap:8px}.profile-actions>*{flex:1}.note{font-size:.86rem;color:var(--muted);margin-top:16px}.empty{display:none;border:1px dashed #644973;padding:24px;border-radius:16px;color:var(--muted);text-align:center}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature,.rule,.review,.faq{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}.icon{font-size:1.55rem}.feature h3,.rule h3{margin:8px 0}.feature p,.rule p,.review p,.faq p{color:var(--muted);margin-bottom:0}.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.plan{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:20px}.plan.featured{border-color:var(--pink);box-shadow:0 0 0 1px #ff6fae22}.plan h3{margin:0}.amount{font-size:2rem;font-weight:900;margin:12px 0}.plan ul{padding-left:20px;color:var(--muted);min-height:120px}.plan li{margin:7px 0}.rules-grid,.review-grid,.faq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.review strong{display:block;margin-top:12px}.stars{color:#ffd178;letter-spacing:2px}.reviews-note{font-size:.85rem;color:var(--muted);margin-top:14px}.booking{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;background:linear-gradient(135deg,#2a1938,#1a1025);border:1px solid #62466f;border-radius:26px;padding:26px}.booking-intro p{color:var(--muted)}.booking-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.booking-form .full{grid-column:1/-1}.fineprint{font-size:.83rem;color:var(--muted)}.notice{padding:13px 15px;border-radius:12px;background:#34213b;border:1px solid #654675;color:#f4d9ef;font-size:.9rem}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:23px}.contact-card p{color:var(--muted)}.footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#e5d5ec}.modal{position:fixed;inset:0;z-index:30;background:#08050bdc;display:none;align-items:center;justify-content:center;padding:16px}.modal.open{display:flex}.modal-box{width:min(600px,100%);max-height:90vh;overflow:auto;background:#1b1227;border:1px solid #674a78;border-radius:22px;padding:23px;position:relative}.modal-box h2{margin-top:0}.close{position:absolute;right:15px;top:12px;background:transparent;color:white;border:0;font-size:1.6rem}.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,150%);z-index:50;background:#f9e9f5;color:#25112c;padding:13px 18px;border-radius:12px;box-shadow:0 10px 35px #0005;transition:transform .3s;max-width:90%;font-weight:700}.toast.show{transform:translate(-50%,0)}.hidden{display:none!important}.policy{color:var(--muted);font-size:.94rem}.support-link{color:#ffc2df;font-weight:800}.age{background:#251731;border:1px solid #72517f;border-radius:12px;padding:13px;color:#f6e6f8;margin:15px 0}.fade{animation:fade .6s both}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:48px}.hero-art{min-height:300px}.hero-art img{height:300px}.profile-grid,.features,.plans,.rules-grid,.review-grid,.faq-grid{grid-template-columns:repeat(2,1fr)}.booking{grid-template-columns:1fr}.navlinks{gap:11px}.navlinks a:not(.btn){display:none}}@media(max-width:560px){.profile-grid,.features,.plans,.rules-grid,.review-grid,.faq-grid,.contact-grid{grid-template-columns:1fr}.filters{grid-template-columns:1fr}.booking-form,.modal-grid{grid-template-columns:1fr}.booking-form .full{grid-column:auto}.hero h1{letter-spacing:-1px}.hero-art{min-height:250px}.hero-art img{height:250px}.section-head{align-items:start;flex-direction:column}.nav .btn{padding:10px 12px}.profile img{height:300px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <div class="wrap nav">
+  <a class="brand" href="#home" aria-label="Saath home"><span class="logo">♡</span><span>saath<span class="gradient">.</span></span></a>
+  <nav class="navlinks" aria-label="Main navigation">
+   <a href="#profiles">Profiles</a><a href="#how">How it works</a><a href="#plans">Plans</a><a href="#rules">Safety</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="btn small" href="#book">Request booking ↗</a>
+ </div>
+</header>
+<main>
+<section class="wrap hero" id="home">
+ <div class="fade">
+  <span class="eyebrow">✦ Thoughtful company, respectful connections</span>
+  <h1>Good company.<br><span class="gradient">Your kind of day.</span></h1>
+  <p>Explore adult companionship profiles for a coffee, a city walk, an event, or conversation. Choose your city and preferred duration, then send a booking request.</p>
+  <div class="hero-actions"><a class="btn" href="#profiles">Explore profiles <span>→</span></a><a class="btn secondary" href="#how">How it works</a></div>
+  <div class="trust"><span>✓ Adults 18+ only</span><span>✓ Clear booking terms</span><span>✓ Respect & consent first</span></div>
+ </div>
+ <div class="hero-art fade">
+  <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85" alt="Friends spending a relaxed afternoon together" onerror="this.style.display='none'">
+  <div class="float-card"><b>Make time for connection ✨</b><span>Coffee · Conversation · City outings</span></div>
+ </div>
+</section>
+
+<section id="profiles">
+ <div class="wrap">
+  <div class="section-head"><div><h2>Meet the community</h2><p>Sample profiles for the demo. Real profiles must be uploaded and verified with consent.</p></div><span class="tag">Adults 18+</span></div>
+  <div class="filters">
+   <div class="field"><label for="cityFilter">Choose city</label><select id="cityFilter"><option value="all">All supported cities</option><option>Delhi</option><option>Mumbai</option><option>Kolkata</option><option>Bengaluru</option><option>Hyderabad</option><option>Chennai</option><option>Pune</option><option>Jaipur</option><option>Lucknow</option><option>Other city (request)</option></select></div>
+   <div class="field"><label for="typeFilter">Companionship style</label><select id="typeFilter"><option value="all">All styles</option><option value="coffee">Coffee & conversation</option><option value="outing">City outing</option><option value="event">Event companion</option></select></div>
+   <button class="btn" id="filterBtn" type="button">Find profiles</button>
+  </div>
+  <div class="profile-grid" id="profileGrid">
+   <article class="profile" data-city="Kolkata" data-type="coffee outing"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Sample profile portrait 1"><div class="profile-body"><div class="profile-top"><h3>Riya, 24</h3><span class="tag">Demo profile</span></div><p>Enjoys cafés, books, and relaxed conversation.</p><div class="profile-meta"><span>📍 Kolkata</span><span class="price">From ₹799/hr</span></div><div class="profile-actions"><button class="btn small book-profile" data-name="Riya, 24">Request</button><button class="btn small secondary details" data-name="Riya, 24" data-city="Kolkata" data-style="Coffee & conversation, city outing">Details</button></div></div></article>
+   <article class="profile" data-city="Mumbai" data-type="outing event"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Sample profile portrait 2"><div class="profile-body"><div class="profile-top"><h3>Anaya, 26</h3><span class="tag">Demo profile</span></div><p>Likes art, museums, and exploring new places.</p><div class="profile-meta"><span>📍 Mumbai</span><span class="price">From ₹999/hr</span></div><div class="profile-actions"><button class="btn small book-profile" data-name="Anaya, 26">Request</button><button class="btn small secondary details" data-name="Anaya, 26" data-city="Mumbai" data-style="City outing, event companion">Details</button></div></div></article>
+   <article class="profile" data-city="Delhi" data-type="coffee event"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80" alt="Sample profile portrait 3"><div class="profile-body"><div class="profile-top"><h3>Meera, 25</h3><span class="tag">Demo profile</span></div><p>Friendly company for coffee and public events.</p><div class="profile-meta"><span>📍 Delhi</span><span class="price">From ₹899/hr</span></div><div class="profile-actions"><button class="btn small book-profile" data-name="Meera, 25">Request</button><button class="btn small secondary details" data-name="Meera, 25" data-city="Delhi" data-style="Coffee & conversation, event companion">Details</button></div></div></article>
+  </div>
+  <div class="empty" id="empty">No demo profiles match those filters. Try another city or send a request for a future city.</div>
+  <p class="note">Demo notice: These are sample cards and prices, not verified listings or confirmed availability. Replace them with genuine, adult, consented profiles before launch. Profile photos are loaded from external image URLs and require internet access.</p>
+ </div>
+</section>
+
+<section id="how">
+ <div class="wrap">
+  <div class="section-head"><div><h2>Simple, transparent booking</h2><p>Four clear steps, with expectations agreed in advance.</p></div></div>
+  <div class="features">
+   <div class="feature"><span class="icon">🧭</span><h3>1. Choose a city</h3><p>Find a profile in a supported city or submit a request for another location.</p></div>
+   <div class="feature"><span class="icon">☕</span><h3>2. Pick an activity</h3><p>Choose platonic company for coffee, a public outing, or an event.</p></div>
+   <div class="feature"><span class="icon">🗓️</span><h3>3. Request a time</h3><p>Share the date, duration, and public meeting preference. Availability must be confirmed.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="plans">
+ <div class="wrap">
+  <div class="section-head"><div><h2>Joining & time packages</h2><p>Illustrative prices only. Publish final terms, taxes, cancellation policy, and provider payouts before accepting payments.</p></div></div>
+  <div class="plans">
+   <article class="plan"><h3>Joining access</h3><div class="amount">₹499</div><p class="policy">One-time joining fee — proposed</p><ul><li>Account access, if enabled</li><li>Booking request access</li><li>Customer support</li></ul><button class="btn secondary join-btn" data-plan="Joining access — ₹499">Choose joining</button></article>
+   <article class="plan featured"><span class="tag">Popular demo package</span><h3>Short meet</h3><div class="amount">₹799 <small style="font-size:.9rem">/ hour</small></div><p class="policy">Example profile rate</p><ul><li>1-hour public meetup request</li><li>Activity agreed beforehand</li><li>Availability confirmation required</li></ul><a class="btn" href="#book">Request booking</a></article>
+   <article class="plan"><h3>Extended outing</h3><div class="amount">₹2,499</div><p class="policy">Illustrative 3-hour package</p><ul><li>Longer daytime outing request</li><li>Plan and meeting point agreed</li><li>Extra time only by mutual consent</li></ul><a class="btn secondary" href="#book">Ask about package</a></article>
+  </div>
+  <div class="notice" style="margin-top:18px"><strong>Payment status:</strong> This demo does not collect money. Do not send payment to a personal UPI ID until the service, business identity, refund terms, and payment process have been independently verified. Payment success must be confirmed by a secure gateway/backend.</div>
+ </div>
+</section>
+
+<section id="book">
+ <div class="wrap booking">
+  <div class="booking-intro"><span class="eyebrow">Booking request</span><h2>Plan a good day.</h2><p>Tell us what you are looking for. This demo validates the form locally and does not transmit or store your details.</p><div class="age">🔞 All participants must be 18 or older. Bookings are for consensual, platonic companionship in agreed settings.</div><p class="fineprint">Do not include passwords, payment PINs, Aadhaar details, or other sensitive information in this form.</p></div>
+  <form id="bookingForm" class="booking-form">
+   <div class="field"><label for="fullName">Your name *</label><input id="fullName" name="fullName" required maxlength="80" autocomplete="name" placeholder="Full name"></div>
+   <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+   <div class="field"><label for="bookCity">City *</label><select id="bookCity" name="city" required><option value="">Select a city</option><option>Kolkata</option><option>Mumbai</option><option>Delhi</option><option>Bengaluru</option><option>Hyderabad</option><option>Chennai</option><option>Pune</option><option>Jaipur</option><option>Lucknow</option><option>Other</option></select></div>
+   <div class="field"><label for="profileChoice">Profile / preference *</label><select id="profileChoice" name="profile" required><option value="">Choose one</option><option>Riya, 24 (demo)</option><option>Anaya, 26 (demo)</option><option>Meera, 25 (demo)</option><option>Any available adult companion</option></select></div>
+   <div class="field"><label for="date">Preferred date *</label><input id="date" name="date" type="date" required></div>
+   <div class="field"><label for="duration">Duration *</label><select id="duration" name="duration" required><option value="">Choose duration</option><option>1 hour</option><option>2 hours</option><option>3 hours</option><option>4 hours</option><option>Other / discuss</option></select></div>
+   <div class="field full"><label for="activity">Activity / notes</label><textarea id="activity" name="activity" rows="3" maxlength="500" placeholder="For example: coffee in a public place"></textarea></div>
+   <div class="field full"><label style="display:flex;gap:10px;align-items:flex-start;font-weight:500"><input type="checkbox" id="consent" required style="width:auto;margin-top:5px"> I confirm I am 18 or older and understand this is a request only, not a confirmed booking or payment.</label></div>
+   <div class="full"><button class="btn" type="submit" style="width:100%">Preview booking request</button><p class="fineprint">Demo only: no booking is sent, no account is created, and no payment is taken.</p></div>
+  </form>
+ </div>
+</section>
+
+<section id="rules">
+ <div class="wrap">
+  <div class="section-head"><div><h2>Respect, safety & rules</h2><p>Clear expectations help keep everyone safer.</p></div></div>
+  <div class="rules-grid">
+   <article class="rule"><span class="icon">🔞</span><h3>Adults only</h3><p>All customers and companions must be 18+. Verify age and identity securely before launch.</p></article>
+   <article class="rule"><span class="icon">🤝</span><h3>Consent always</h3><p>Companionship is platonic. No one owes physical contact; either person may end a meeting at any time.</p></article>
+   <article class="rule"><span class="icon">📍</span><h3>Meet safely</h3><p>Prefer public places, tell a trusted person your plan, and avoid sharing home addresses with strangers.</p></article>
+   <article class="rule"><span class="icon">💳</span><h3>Transparent fees</h3><p>Show all fees, taxes, cancellation terms, and refund conditions before payment.</p></article>
+   <article class="rule"><span class="icon">🪪</span><h3>Real profiles</h3><p>Use only genuine, consented photos and accurate profile details. Never impersonate another person.</p></article>
+   <article class="rule"><span class="icon">🚫</span><h3>No coercion</h3><p>No harassment, threats, illegal activity, intoxication-related pressure, or attempts to bypass boundaries.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="reviews">
+ <div class="wrap">
+  <div class="section-head"><div><h2>Community feedback</h2><p>Example layout only — not actual customer testimonials.</p></div></div>
+  <div class="review-grid">
+   <article class="review"><div class="stars">★★★★★</div><p>“The booking steps were clear and I knew what to expect.”</p><strong>Demo testimonial</strong></article>
+   <article class="review"><div class="stars">★★★★★</div><p>“I appreciated the focus on public meetups and mutual respect.”</p><strong>Demo testimonial</strong></article>
+   <article class="review"><div class="stars">★★★★★</div><p>“Transparent pricing makes planning easier.”</p><strong>Demo testimonial</strong></article>
+  </div>
+  <p class="reviews-note">These reviews are placeholders. Remove them or replace them only with genuine, permissioned reviews. Do not publish fabricated ratings.</p>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="wrap">
+  <div class="section-head"><div><h2>Frequently asked questions</h2></div></div>
+  <div class="faq-grid">
+   <article class="faq"><h3>Is the booking instant?</h3><p>No. A request must be reviewed and availability confirmed. This demo does not submit requests to a server.</p></article>
+   <article class="faq"><h3>Can I request another city?</h3><p>Yes, select “Other” in the form. Service coverage is not guaranteed until confirmed.</p></article>
+   <article class="faq"><h3>Is the ₹499 fee refundable?</h3><p>The policy has not been set. Define the exact service provided, refund conditions, and cancellation policy before collecting any fee.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <div class="section-head"><div><h2>Need help?</h2><p>Support details below are placeholders and should be verified before publication.</p></div></div>
+  <div class="contact-grid">
+   <div class="contact-card"><span class="icon">💬</span><h3>Telegram support</h3><p>Proposed support handle supplied for this demo. Confirm ownership and set up a real support process before launch.</p><a class="support-link" href="https://t.me/rolex_yt" target="_blank" rel="noopener noreferrer">@rolex_yt ↗</a><p class="fineprint">A Telegram link does not guarantee 24/7 availability. Publish support hours you can actually meet.</p></div>
+   <div class="contact-card"><span class="icon">🛡️</span><h3>Privacy & account help</h3><p>Use a dedicated business contact and publish a privacy notice that explains what data is collected, why it is used, retention, deletion, and complaint handling.</p><a href="#privacy">Read privacy notice ↓</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="privacy">
+ <div class="wrap">
+  <div class="section-head"><div><h2>Privacy notice</h2><p>Starter text; obtain appropriate legal review before launch.</p></div></div>
+  <div class="contact-card policy">
+   <p><strong>Demo website:</strong> This static page does not send the booking form to a server, create accounts, take payments, or intentionally save submitted form data. The form preview is shown locally in your browser.</p>
+   <p><strong>Future production service:</strong> Before launch, disclose the operator's legal identity and contact, data collected (such as contact details, booking preferences, and verification status), purpose and lawful basis, processors, retention periods, user rights, security controls, and grievance contact. Collect only necessary information and restrict access to sensitive identity data.</p>
+   <p><strong>Photos and reviews:</strong> Publish only content you have permission to use. Provide a way to report, correct, or remove content. Do not upload intimate or private images without explicit consent.</p>
+   <p><strong>Payments:</strong> A payment provider should handle payment details. Never request UPI PINs, card PINs, or OTPs in a form or chat. Do not display a payment-success state without server-side verification.</p>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="footer">
+ <div class="wrap footer-inner"><div><a class="brand" href="#home"><span class="logo">♡</span><span>saath<span class="gradient">.</span></span></a><p>Better company, with clear boundaries.</p></div><div><a href="#rules">Safety rules</a> · <a href="#privacy">Privacy</a> · <a href="#contact">Support</a><p>© <span id="year"></span> Saath. Demo template; not a live booking service.</p></div></div>
+</footer>
+
+<div class="modal" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="detailsTitle">
+ <div class="modal-box"><button class="close" data-close aria-label="Close dialog">×</button><h2 id="detailsTitle">Profile details</h2><p id="detailsText" class="policy"></p><div class="notice">Demo profile only. Confirm identity, consent, availability, and terms before a real booking.</div><p style="margin-top:18px"><button class="btn" id="detailsBook">Request this profile</button></p></div>
+</div>
+<div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
+ <div class="modal-box"><button class="close" data-close aria-label="Close dialog">×</button><h2 id="previewTitle">Booking request preview</h2><div id="previewContent" class="policy"></div><div class="notice">Nothing has been sent or booked. Connect a secure backend to submit requests.</div><p style="margin-top:18px"><button class="btn secondary" data-close>Close preview</button></p></div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const $=(s,root=document)=>root.querySelector(s), $$=(s,root=document)=>[...root.querySelectorAll(s)];
+$('#year').textContent=new Date().getFullYear();
+const toast=(msg)=>{const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove('show'),3300)};
+$('#filterBtn').addEventListener('click',()=>{const city=$('#cityFilter').value,type=$('#typeFilter').value;let shown=0;$$('.profile').forEach(card=>{const okCity=city==='all'||card.dataset.city===city;const okType=type==='all'||card.dataset.type.split(' ').includes(type);card.classList.toggle('hidden',!(okCity&&okType));if(okCity&&okType)shown++});$('#empty').style.display=shown?'none':'block'});
+function openModal(id){$('#'+id).classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(el){el.classList.remove('open');document.body.style.overflow=''}
+$$('[data-close]').forEach(b=>b.addEventListener('click',()=>closeModal(b.closest('.modal'))));
+$$('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m)}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape') $$('.modal.open').forEach(closeModal)});
+let selectedProfile='';
+$$('.details').forEach(b=>b.addEventListener('click',()=>{selectedProfile=b.dataset.name;$('#detailsTitle').textContent=b.dataset.name;$('#detailsText').textContent=`City: ${b.dataset.city}. Companionship style: ${b.dataset.style}. This is a sample profile for demonstrating the website interface, not a verified listing.`;openModal('detailsModal')}));
+$$('.book-profile').forEach(b=>b.addEventListener('click',()=>{selectedProfile=b.dataset.name;$('#profileChoice').value=selectedProfile+' (demo)';$('#book').scrollIntoView({behavior:'smooth'});toast('Profile selected. Complete the request form below.')}));
+$('#detailsBook').addEventListener('click',()=>{closeModal($('#detailsModal'));$('#profileChoice').value=selectedProfile+' (demo)';$('#book').scrollIntoView({behavior:'smooth'});toast('Profile selected. Complete the request form below.')});
+$$('.join-btn').forEach(b=>b.addEventListener('click',()=>toast('Joining fee is illustrative. No payment is enabled on this demo website.')));
+const dateInput=$('#date');const today=new Date();dateInput.min=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+$('#bookingForm').addEventListener('submit',e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;const data=new FormData(e.currentTarget);const safe=(v)=>String(v||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const rows=[['Name',data.get('fullName')],['Email',data.get('email')],['City',data.get('city')],['Profile',data.get('profile')],['Date',data.get('date')],['Duration',data.get('duration')],['Activity / notes',data.get('activity')||'Not specified']];$('#previewContent').innerHTML='<dl>'+rows.map(([k,v])=>`<dt style="font-weight:800;color:#fff;margin-top:12px">${safe(k)}</dt><dd style="margin:3px 0 0">${safe(v)}</dd>`).join('')+'</dl>';openModal('previewModal')});
+</script>
+</body>
+</html>
